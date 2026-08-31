@@ -1,4 +1,5 @@
 # 2026 금융 AI Challenge — 대회 요약 (팀 공유용)
+### 출품작: Safe-T
 
 > 출처: 대회 공식 페이지 API 원문 (2026-08-29 기준)
 > https://daker.ai/public/hackathons/2026-finance-ai-challenge

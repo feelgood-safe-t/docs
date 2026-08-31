@@ -1,6 +1,6 @@
-# SAFE-T — 기획·문서 레포
+# Safe-T — 기획·문서 레포
 
-> **서비스명:** **SAFE-T** (세이프티) · 「AI 레버리지 안전투자 훈련 플랫폼」
+> **서비스명:** **Safe-T** (세이프티) · 「AI 레버리지 안전투자 훈련 플랫폼」
 > Simulated AI Finance Education & Training
 > **대회:** 2026 금융 AI Challenge (주최 금융보안원 · 후원 금융위원회 · 운영 데이콘)
 > **최종 마감:** 🔴 **2026-09-07(월) 10:00**
@@ -14,6 +14,7 @@
 - 발표자료(PDF)는 **상위 11팀 진출 시 10/8 마감**, 발표는 10/13.
 - 배포 URL은 **9/7 11:00 ~ 9/11 23:59 접속 불가 시 결격**.
 - 팀 **4인 확정** (규정상 최대 4인 — 충족). 리뷰 담당은 팀원이 아니므로 **제출 서류의 구성원란에 기재하지 않는다.**
+- **`spec/README.md`가 중심 기획안이다.** 다른 모든 문서는 여기에 정렬한다.
 
 ## 📂 문서
 
@@ -24,11 +25,11 @@
 | [`01-research/02-competitive-analysis.md`](01-research/02-competitive-analysis.md) | 제도형/증권사형/앱형 3계층 비교, 공통 한계 C1~C5, 포지셔닝 |
 | [`spec/README.md`](spec/README.md) | **중심 기획안 (채택안).** PoC 범위·평가 배점·AI 역할 경계 |
 | [`02-proposal/spec-gap-analysis.md`](02-proposal/spec-gap-analysis.md) | **중심 기획안 대조 분석.** 충돌·공백·확인 요청·문서별 액션 |
-| [`02-proposal/proposal-draft-v0.6.md`](02-proposal/proposal-draft-v0.6.md) | 공모전 기획서 초안. 첨부1 양식 7개 항목에 1:1 매핑 (v0.7 개정 예정) |
-| [`03-survey/01-demand-validation-survey.md`](03-survey/01-demand-validation-survey.md) | 16문항, Google Forms 붙여넣기용. 기획서 인용 지표 정의 포함 |
-| [`03-survey/02-investor-profiling-questionnaire.md`](03-survey/02-investor-profiling-questionnaire.md) | 온보딩 12문항 + 시나리오 파라미터 변환 스키마 |
-| [`04-uiux/user-flow-and-wireframes-v0.5.md`](04-uiux/user-flow-and-wireframes-v0.5.md) | 전체 플로우 + 핵심 화면 6종 와이어프레임 |
-| [`05-meetings/2026-09-02-meeting-agenda.md`](05-meetings/2026-09-02-meeting-agenda.md) | 9/2 미팅 아젠다 · 결정사항 D1~D8 · 마감 역산 일정 |
+| [`02-proposal/proposal-draft-v0.7.md`](02-proposal/proposal-draft-v0.7.md) | **메인 산출물.** 스펙 반영본. 첨부1 양식 7개 항목에 1:1 매핑 |
+| [`03-survey/01-demand-validation-survey.md`](03-survey/01-demand-validation-survey.md) | 17문항, Google Forms 붙여넣기용. 기획서 인용 지표 정의 포함 |
+| [`03-survey/02-investor-profiling-questionnaire.md`](03-survey/02-investor-profiling-questionnaire.md) | 온보딩 10문항. 스펙의 성향 분석 7개 항목에 매핑, 채점 기준선 확보 |
+| [`04-uiux/user-flow-and-wireframes-v0.6.md`](04-uiux/user-flow-and-wireframes-v0.6.md) | 캐주얼 판단 모드 기준 전체 플로우 + 핵심 화면 7종 와이어프레임 |
+| [`05-meetings/2026-09-02-meeting-agenda.md`](05-meetings/2026-09-02-meeting-agenda.md) | 9/2 미팅 아젠다 · 결정사항 D1~D6 · 팀장 확인 요청 · 마감 역산 일정 |
 | `99-templates/` | 대회 공식 hwpx 양식 2종 (첨부1 기획서 / 첨부2 기능명세서) |
 
 ## ✍️ 작성 규칙
