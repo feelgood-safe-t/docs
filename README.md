@@ -22,7 +22,9 @@
 | [`00-competition/competition-overview-and-checklist.md`](00-competition/competition-overview-and-checklist.md) | 규정·일정·심사기준·제출물 체크리스트 (공식 API 원문 기반) |
 | [`01-research/01-problem-definition-evidence.md`](01-research/01-problem-definition-evidence.md) | 레버리지 사태 타임라인, 모의거래 의무화 제도 분석, 금융이해력 통계, 출처 |
 | [`01-research/02-competitive-analysis.md`](01-research/02-competitive-analysis.md) | 제도형/증권사형/앱형 3계층 비교, 공통 한계 C1~C5, 포지셔닝 |
-| [`02-proposal/proposal-draft-v0.6.md`](02-proposal/proposal-draft-v0.6.md) | **메인 산출물.** 첨부1 양식 7개 항목에 1:1 매핑된 초안 |
+| [`spec/README.md`](spec/README.md) | **중심 기획안 (채택안).** PoC 범위·평가 배점·AI 역할 경계 |
+| [`02-proposal/spec-gap-analysis.md`](02-proposal/spec-gap-analysis.md) | **중심 기획안 대조 분석.** 충돌·공백·확인 요청·문서별 액션 |
+| [`02-proposal/proposal-draft-v0.6.md`](02-proposal/proposal-draft-v0.6.md) | 공모전 기획서 초안. 첨부1 양식 7개 항목에 1:1 매핑 (v0.7 개정 예정) |
 | [`03-survey/01-demand-validation-survey.md`](03-survey/01-demand-validation-survey.md) | 16문항, Google Forms 붙여넣기용. 기획서 인용 지표 정의 포함 |
 | [`03-survey/02-investor-profiling-questionnaire.md`](03-survey/02-investor-profiling-questionnaire.md) | 온보딩 12문항 + 시나리오 파라미터 변환 스키마 |
 | [`04-uiux/user-flow-and-wireframes-v0.5.md`](04-uiux/user-flow-and-wireframes-v0.5.md) | 전체 플로우 + 핵심 화면 6종 와이어프레임 |
