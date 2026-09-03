@@ -26,9 +26,10 @@
 | [`spec/README.md`](spec/README.md) | **중심 기획안 (채택안).** PoC 범위·평가 배점·AI 역할 경계 |
 | [`02-proposal/spec-gap-analysis.md`](02-proposal/spec-gap-analysis.md) | **중심 기획안 대조 분석.** 충돌·공백·확인 요청·문서별 액션 |
 | [`02-proposal/proposal-draft-v0.7.md`](02-proposal/proposal-draft-v0.7.md) | **메인 산출물.** 스펙 반영본. 첨부1 양식 7개 항목에 1:1 매핑 |
-| [`03-survey/01-demand-validation-survey.md`](03-survey/01-demand-validation-survey.md) | ⏸️ **보류** — 이번 대회에서는 실시하지 않음. 발표 심사·출시 후 사용을 위해 보존 |
-| [`03-survey/02-investor-profiling-questionnaire.md`](03-survey/02-investor-profiling-questionnaire.md) | 온보딩 10문항. 스펙의 성향 분석 7개 항목에 매핑, 채점 기준선 확보 |
+| [`03-survey/01-demand-validation-survey.md`](03-survey/01-demand-validation-survey.md) | ⏸️ **보류** — 이번 대회에서는 실시하지 않음 |
+| [`03-survey/02-investor-profiling-questionnaire.md`](03-survey/02-investor-profiling-questionnaire.md) | **확정 명세 v1.1.** 프론트 10문항 기준 + 시나리오 매칭·채점 연결 정의 + 백엔드 반영 과제 |
 | [`04-uiux/user-flow-and-wireframes-v0.6.md`](04-uiux/user-flow-and-wireframes-v0.6.md) | 캐주얼 판단 모드 기준 전체 플로우 + 화면 7종 + **구현 시안 반영 및 스펙 대비 누락 체크리스트** |
+| [`06-implementation/repo-alignment.md`](06-implementation/repo-alignment.md) | ⭐ **docs·backend·frontend 3자 정합성.** 세션 구조 분기, 배점 30점 재정의, 미해결 항목 |
 | [`05-meetings/2026-09-02-meeting-agenda.md`](05-meetings/2026-09-02-meeting-agenda.md) | 9/2 미팅 아젠다 · 결정사항 D1~D6 · 팀장 확인 요청 · 마감 역산 일정 |
 | `99-templates/` | 대회 공식 hwpx 양식 2종 (첨부1 기획서 / 첨부2 기능명세서) |
 
