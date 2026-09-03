@@ -29,7 +29,7 @@
 | [`03-survey/01-demand-validation-survey.md`](03-survey/01-demand-validation-survey.md) | ⏸️ **보류** — 이번 대회에서는 실시하지 않음 |
 | [`03-survey/02-investor-profiling-questionnaire.md`](03-survey/02-investor-profiling-questionnaire.md) | **확정 명세 v1.1.** 프론트 10문항 기준 + 시나리오 매칭·채점 연결 정의 + 백엔드 반영 과제 |
 | [`04-uiux/user-flow-and-wireframes-v0.6.md`](04-uiux/user-flow-and-wireframes-v0.6.md) | 캐주얼 판단 모드 기준 전체 플로우 + 화면 7종 + **구현 시안 반영 및 스펙 대비 누락 체크리스트** |
-| [`06-implementation/repo-alignment.md`](06-implementation/repo-alignment.md) | ⭐ **docs·backend·frontend 3자 정합성.** 세션 구조 분기, 배점 30점 재정의, 미해결 항목 |
+| [`06-implementation/repo-alignment.md`](06-implementation/repo-alignment.md) | **구현 저장소 참고 메모.** 기획 문서를 사실에 맞게 쓰기 위한 대조 기록 (backend·frontend는 관리 범위 밖) |
 | [`05-meetings/2026-09-02-meeting-agenda.md`](05-meetings/2026-09-02-meeting-agenda.md) | 9/2 미팅 아젠다 · 결정사항 D1~D6 · 팀장 확인 요청 · 마감 역산 일정 |
 | `99-templates/` | 대회 공식 hwpx 양식 2종 (첨부1 기획서 / 첨부2 기능명세서) |
 

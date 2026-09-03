@@ -5,11 +5,13 @@
 > 미팅이 요구한 *"질문 / N개 선택지 / 세부 정보 명세"* 3요소를 모두 갖추고 있고 백엔드 ID 규약도 따르므로,
 > **이 문서는 프론트엔드 draft를 확정안으로 채택**하고 거기에 없는 **① 시나리오 매칭 쓰임 ② 채점 기준선 연결 ③ 백엔드 반영 과제**를 더한다.
 >
-> | 저장소 | 상태 |
-> |---|---|
-> | `frontend/src/data/onboardingQuestions.ts` | **10문항** · `questionnaire-safe-t-v2-frontend-draft` ✅ 기준선 |
-> | `backend/fixtures/questionnaire.json` | **7문항** · `questionnaire-safe-t-v1` 🔴 **3문항 추가 + 스키마 확장 필요** |
-> | 이 문서 | 확정 명세 · 채점 연결 정의 |
+> | 저장소 | 상태 | 소관 |
+> |---|---|---|
+> | `frontend/src/data/onboardingQuestions.ts` | **10문항** · `questionnaire-safe-t-v2-frontend-draft` | 프론트엔드 담당 |
+> | `backend/fixtures/questionnaire.json` | **7문항** · `questionnaire-safe-t-v1` | 엔진 담당 |
+> | **이 문서** | **확정 명세 · 채점 연결 정의** | **기획 담당** |
+>
+> ⚠️ backend·frontend 저장소는 기획 담당의 관리 범위 밖이다. 아래 §3의 차이는 **지시가 아니라 전달·확인 사항**이다.
 
 ---
 
@@ -71,14 +73,17 @@
 
 ---
 
-## 3. 🔴 백엔드 반영 과제
+## 3. 참고 — 구현 저장소와의 차이 (전달 사항)
 
-`backend/fixtures/questionnaire.json`은 아직 **7문항 v1**이다. 다음이 필요하다.
+> 아래는 문서 작성 과정에서 대조하며 확인된 차이다. **조치는 각 저장소 담당의 판단 사항**이며,
+> 여기서는 *"기획 문서 기준으로는 이렇게 정의돼 있다"*를 남기는 것이 목적이다.
 
-### 3.1 문항 3개 추가
-`survey-q-holding-period` · `survey-q-evidence-priority` · `survey-q-learning-goal`
+`backend/fixtures/questionnaire.json`은 확인 시점 기준 **7문항 v1**이었다.
 
-### 3.2 스키마 확장 — 필드 2개 누락
+### 3.1 문항 수 차이
+프론트엔드 draft에만 있는 3문항 — `survey-q-holding-period` · `survey-q-evidence-priority` · `survey-q-learning-goal`
+
+### 3.2 필드 차이 — `category` · `detail`
 
 | 필드 | 프론트엔드 | 백엔드 fixture | 문제 |
 |---|---|---|---|
@@ -87,13 +92,13 @@
 
 > **이대로면 프론트가 문구를 자체 보유하게 되어 백엔드 문항과 어긋난다.**
 > 설문 문구는 **버전 고정 대상**(`questionnaireVersionId`)인데 두 곳에 나뉘면 버전 관리가 깨진다.
-> → 백엔드 fixture 스키마에 `category`, `detail`(문항·선택지) 추가를 제안한다.
+> → 문구를 한 곳에서 관리하려면 fixture 쪽에도 `category`·`detail`이 필요해 보인다. **판단은 엔진 담당 소관.**
 
-### 3.3 타입 정합
-`survey-q-source-check`가 백엔드는 `BOOLEAN`, 프론트는 `SINGLE_CHOICE`(예/아니요 2지선다)다. 프론트 방식이 `detail` 부여에 유리하므로 **`SINGLE_CHOICE`로 통일**을 제안한다.
+### 3.3 타입 차이
+`survey-q-source-check`가 백엔드는 `BOOLEAN`, 프론트는 `SINGLE_CHOICE`(예/아니요)다. 문서상으로는 선택지에 `detail`을 붙일 수 있는 **`SINGLE_CHOICE` 기준으로 기술**한다.
 
-### 3.4 버전 ID 확정
-`questionnaire-safe-t-v2-frontend-draft` → **`questionnaire-safe-t-v2`** 로 확정 후 양쪽 동기화.
+### 3.4 버전 ID
+프론트 draft는 `questionnaire-safe-t-v2-frontend-draft`다. 확정 시 **`questionnaire-safe-t-v2`**로 정리하자는 제안을 9/6 미팅 안건으로 올려둔다.
 
 ---
 
@@ -120,12 +125,14 @@
 
 ---
 
-## 5. 구현 체크리스트
+## 5. 후속
 
-- [ ] 백엔드 fixture 7 → **10문항** 갱신
-- [ ] 백엔드 fixture 스키마에 **`category`·`detail`** 추가
-- [ ] `survey-q-source-check` 타입을 `SINGLE_CHOICE`로 통일
-- [ ] `questionnaireVersionId`를 **`questionnaire-safe-t-v2`**로 확정, 프론트·백엔드 동기화
-- [ ] Selection Orchestrator: 응답 → 시나리오 3개 선택 로직에 §2 매핑 반영
-- [ ] 🔴 **rubric 작성** — `evaluationPlanRef`가 가리킬 평가 증거 계획 (§4 선행 과제)
-- [ ] 심사위원용 **프리셋 프로파일** (설문 스킵 경로)
+**기획 담당 (이 문서 범위)**
+- [ ] 9/6 미팅에서 §4(배점 30점 재정의) 결론을 받아 이 문서와 기획서에 반영
+- [ ] 확정 문항·채점 연결을 **기능명세서 4번(AI 및 데이터 처리 방식)**에 옮겨 기술
+
+**팀에 전달할 사항** *(각 담당 소관)*
+- 문항 수·필드·타입·버전 ID 차이 (§3)
+- Selection Orchestrator의 시나리오 선택 로직에 §2 매핑이 반영되는지
+- `evaluationPlanRef`가 가리킬 **rubric 작성 주체와 일정** (§4의 선행 과제)
+- 심사위원용 프리셋 프로파일 (설문 스킵 경로) — 기능명세서 5번 기재 대상
