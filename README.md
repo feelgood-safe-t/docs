@@ -28,6 +28,7 @@
 | [`02-proposal/spec-gap-analysis.md`](02-proposal/spec-gap-analysis.md) | **중심 기획안 대조 분석.** 충돌·공백·확인 요청·문서별 액션 |
 | [`02-proposal/proposal-draft-v0.8.md`](02-proposal/proposal-draft-v0.8.md) | **메인 산출물.** 스펙 반영본. 첨부1 양식 7개 항목에 1:1 매핑 |
 | [`03-survey/01-demand-validation-survey.md`](03-survey/01-demand-validation-survey.md) | ⏸️ **보류** — 이번 대회에서는 실시하지 않음 |
+| [`03-survey/03-onboarding-questions-share.md`](03-survey/03-onboarding-questions-share.md) | ⭐ **공유용.** 온보딩 10문항의 질문·선택지·의도만 정리 |
 | [`03-survey/02-investor-profiling-questionnaire.md`](03-survey/02-investor-profiling-questionnaire.md) | **확정 명세 v1.1.** 프론트 10문항 기준 + 시나리오 매칭·채점 연결 정의 + 백엔드 반영 과제 |
 | [`04-uiux/user-flow-and-wireframes-v0.6.md`](04-uiux/user-flow-and-wireframes-v0.6.md) | ⏸️ **프론트엔드 전담.** 구현 결과를 기능명세서로 옮기기 위한 참고 자료 |
 | [`06-implementation/repo-alignment.md`](06-implementation/repo-alignment.md) | **구현 저장소 참고 메모.** 기획 문서를 사실에 맞게 쓰기 위한 대조 기록 (backend·frontend는 관리 범위 밖) |

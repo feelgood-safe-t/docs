@@ -1,5 +1,7 @@
 # 온보딩 투자 성향 설문 — 확정 명세 v1.1
 
+> 📄 **팀 공유용 간단 정리는 [`03-onboarding-questions-share.md`](03-onboarding-questions-share.md)** — 질문·선택지·의도만 담았다.
+
 > **기준선 변경 (2026-09-03)** — 프론트엔드 저장소에 **10문항 draft가 이미 구현**되어 있다
 > (`frontend/src/data/onboardingQuestions.ts`, `questionnaire-safe-t-v2-frontend-draft`).
 > 미팅이 요구한 *"질문 / N개 선택지 / 세부 정보 명세"* 3요소를 모두 갖추고 있고 백엔드 ID 규약도 따르므로,
