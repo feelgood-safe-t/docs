@@ -2,7 +2,7 @@
 
 > 📄 **팀 공유용 간단 정리는 [`03-onboarding-questions-share.md`](03-onboarding-questions-share.md)** — 질문·선택지·의도만 담았다.
 
-> **확정 (2026-09-04)** — 프론트엔드의 10문항 draft를 문구 기준으로 채택하고 공개 계약의
+> **확정 (2026-09-04)** — 프론트엔드의 10문항 draft를 출발점으로 채택하고 공개 계약의
 > 버전 ID를 **`questionnaire-safe-t-v2`**로 확정한다. 질문과 선택지의 `category`·`detail`,
 > 단일/복수 선택 범위까지 questionnaire 버전에 포함한다.
 >
