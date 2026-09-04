@@ -1,10 +1,10 @@
 # 구현 저장소 정합성 기록
 
-> 갱신 2026-09-04 · 기준: `spec/README.md`, Backend Engine runtime `0.4.0`
+> 갱신 2026-09-04 · 기준: `spec/README.md`, Backend Engine runtime `0.5.0`
 
 ## 결론
 
-Backend Engine은 중앙 엔진의 PoC 범위인 시나리오 재생, 설문·단일 UP/DOWN·뉴스 열람 기록,
+Backend Engine은 중앙 엔진의 PoC 범위인 시나리오 재생, 설문·반복 UP/DOWN·뉴스 열람 기록,
 불변 Evaluation Snapshot 제공을 구현한다. LLM 호출, 성향 해석, 시나리오 추천, 점수·PASS와
 보고서는 엔진 밖에 둔다.
 
@@ -14,11 +14,11 @@ Backend Engine은 중앙 엔진의 PoC 범위인 시나리오 재생, 설문·�
 |---|---|
 | 시험 | 서로 다른 단일 자산 문항 정확히 3개, 순차 진행 |
 | 시간 | 문항당 180초, 시장 60배속, 서버 시각 권위 |
-| 응답 | 문항당 UP/DOWN 정확히 1회, 변경·덮어쓰기 없음 |
+| 응답 | 문항당 UP/DOWN 최소 1회, 제한 시간 중 수시 입력, 모든 입력 append-only 누적 |
 | 응답 근거 | `reasonTags` 1개 이상과 `confidence` 필수, `reasonText` 선택 |
 | 설문 | `questionnaire-safe-t-v2`, 10문항, 질문·선택지 상세와 선택 범위 고정 |
 | 열람 | 뉴스 목록 제공과 상세 열람 이벤트를 구분하고 서버 시각·시장 offset 기록 |
-| Snapshot | 설문 원본, 단일 응답, 뉴스 공개·열람 상태, 응답 전후 캔들 문맥을 불변 봉인 |
+| Snapshot | 설문 원본, 모든 판단 이벤트, 뉴스 공개·열람 상태, 판단별 전후 캔들 문맥을 불변 봉인 |
 | 평가 경계 | 방향 적중·수익률을 계산하지 않으며 점수·PASS는 후단 책임 |
 | 제외 범위 | 주문·포지션·비중·잔고·PnL·MDD·quiz 없음 |
 
