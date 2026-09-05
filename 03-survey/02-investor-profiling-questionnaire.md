@@ -1,19 +1,16 @@
-# 온보딩 투자 성향 설문 — 확정 명세 v1.1
+# 온보딩 투자 성향 설문 — 확정 명세 v2.0
 
 > 📄 **팀 공유용 간단 정리는 [`03-onboarding-questions-share.md`](03-onboarding-questions-share.md)** — 질문·선택지·의도만 담았다.
 
-> **기준선 변경 (2026-09-03)** — 프론트엔드 저장소에 **10문항 draft가 이미 구현**되어 있다
-> (`frontend/src/data/onboardingQuestions.ts`, `questionnaire-safe-t-v2-frontend-draft`).
-> 미팅이 요구한 *"질문 / N개 선택지 / 세부 정보 명세"* 3요소를 모두 갖추고 있고 백엔드 ID 규약도 따르므로,
-> **이 문서는 프론트엔드 draft를 확정안으로 채택**하고 거기에 없는 **① 시나리오 매칭에서의 역할 ② 결과 보고서 개인화 활용 ③ 구현 저장소와의 차이**를 더한다.
+> **확정 (2026-09-04)** — 프론트엔드의 10문항 draft를 출발점으로 채택하고 공개 계약의
+> 버전 ID를 **`questionnaire-safe-t-v2`**로 확정한다. 질문과 선택지의 `category`·`detail`,
+> 단일/복수 선택 범위까지 questionnaire 버전에 포함한다.
 >
 > | 저장소 | 상태 | 소관 |
 > |---|---|---|
-> | `frontend/src/data/onboardingQuestions.ts` | **10문항** · `questionnaire-safe-t-v2-frontend-draft` | 프론트엔드 담당 |
-> | `backend/fixtures/questionnaire.json` | **7문항** · `questionnaire-safe-t-v1` | 엔진 담당 |
+> | `frontend/src/data/onboardingQuestions.ts` | 채택한 10문항 문구의 출처 | 프론트엔드 담당 |
+> | `backend/fixtures/questionnaire.json` | **10문항** · `questionnaire-safe-t-v2` 게시 계약 | 엔진 담당 |
 > | **이 문서** | **확정 명세 · 채점 연결 정의** | **기획 담당** |
->
-> ⚠️ backend·frontend 저장소는 기획 담당의 관리 범위 밖이다. 아래 §3의 차이는 **지시가 아니라 전달·확인 사항**이다.
 
 ---
 
@@ -31,7 +28,8 @@
 
 ## 1. 확정 문항 10개
 
-> `prompt`·`detail`·선택지 문구는 **프론트엔드 구현이 정본**이다. 아래는 대조 및 채점 연결용 요약이다.
+> `prompt`·`detail`·선택지 문구는 채택된 10문항을 백엔드 questionnaire version으로 고정해
+> 제공한다. 프론트는 가능한 한 `GET /v1/questionnaires/current` 응답을 사용해 중복 정본을 만들지 않는다.
 
 | # | questionId | 카테고리 | 질문 | 유형 | 선택 |
 |---|---|---|---|---|---|
@@ -77,18 +75,19 @@
 | 9 | `evidence-priority` | price / fundamental / flow / cross-check | 시나리오의 **정보 유형 구성** (차트 주도 vs 공시 주도) |
 | 10 | `learning-goal` | source / volatility / bias / record | 목표에 맞는 시나리오 **우선 배정** |
 
-### 2.2 결과 보고서 개인화 — 채점이 아니라 서술에 쓰인다
+### 2.2 결과 보고서 개인화
 
-설문 원본은 **Evaluation Snapshot에 함께 봉인**된다 (`payload.survey`: `questionnaireVersionId`, `questions`, `answers`).
-따라서 **Report Service가 보고서를 쓸 때 참조할 수 있다.** 다만 이는 **점수가 아니라 서술의 개인화**다.
+설문 원본은 **Evaluation Snapshot에 함께 봉인**된다. 따라서 Report Service가 보고서를 쓸 때
+참조할 수 있다. 아래와 같은 서술 개인화 자체는 별도 점수가 아니지만, §2.3의 다섯 문항은
+「초기 성향과 응답의 정합성」 평가 근거로도 사용한다.
 
 | 대조 | 보고서 문장 |
 |---|---|
-| Q5 × 열람 로그 | *"커뮤니티 정보를 교차 확인한다고 답하셨습니다. 이번 평가에서는 커뮤니티 글을 본 뒤 30초 이내에 판단한 것이 6회, 공시를 열어본 것은 1회였습니다."* |
-| Q9 × `reasonTags` | *"판단 시 '실적과 공시'를 먼저 본다고 하셨지만, 실제 기록한 근거 태그는 9건 중 7건이 `NEWS`와 `INTUITION`이었습니다."* |
+| Q5 × 열람 로그 | *"정보를 교차 확인한다고 답했으며, 첫 문항에서는 제공된 뉴스 두 건 중 한 건을 판단 전에 열람했습니다."* |
+| Q9 × `reasonTags` | *"가격과 차트를 먼저 본다고 답했으며, 실제 세 문항의 판단 근거에서도 `PRICE`를 일관되게 선택했습니다."* |
 
-> 이 대조는 **교육적 가치가 크지만 점수화하지는 않는다.** 자기 인식과 실제 행동의 괴리를 보여주는 것이 목적이다.
-> 🔴 점수 반영 여부는 rubric(`evaluationPlanRef`) 소관이며 아직 정해지지 않았다.
+> 설문 선택지 자체에 점수를 주지는 않는다. 선언한 성향과 실제 행동이 어떻게 이어지는지만
+> 공개된 과정 평가 rubric에 따라 정성 평가한다.
 
 ### 2.3 채점 연결 — 「초기 성향과 응답의 정합성」 15점
 
@@ -108,32 +107,17 @@
 > ⚠️ **"기준선"이 아니라 "대조 재료"다.** 문항 응답에 점수가 매겨지는 것이 아니라,
 > *선언한 성향과 실제 판단이 어떻게 이어지는지*를 LLM이 정성 평가한다. 나머지 문항은 시나리오 매칭 전용이다.
 
-## 3. 참고 — 구현 저장소와의 차이 (전달 사항)
+## 3. questionnaire v2 구현 계약
 
-> 아래는 문서 작성 과정에서 대조하며 확인된 차이다. **조치는 각 저장소 담당의 판단 사항**이며,
-> 여기서는 *"기획 문서 기준으로는 이렇게 정의돼 있다"*를 남기는 것이 목적이다.
-
-`backend/fixtures/questionnaire.json`은 확인 시점 기준 **7문항 v1**이었다.
-
-### 3.1 문항 수 차이
-프론트엔드 draft에만 있는 3문항 — `survey-q-holding-period` · `survey-q-evidence-priority` · `survey-q-learning-goal`
-
-### 3.2 필드 차이 — `category` · `detail`
-
-| 필드 | 프론트엔드 | 백엔드 fixture | 문제 |
-|---|---|---|---|
-| `category` | ✅ 있음 (투자 경험, 위험 선호 …) | ❌ 없음 | 화면 그룹 라벨 |
-| `detail` | ✅ 문항·선택지 **모두** 있음 | ❌ 없음 | **선택지 보조 설명이 사라진다.** 용어 장벽을 낮추는 핵심 장치 |
-
-> **이대로면 프론트가 문구를 자체 보유하게 되어 백엔드 문항과 어긋난다.**
-> 설문 문구는 **버전 고정 대상**(`questionnaireVersionId`)인데 두 곳에 나뉘면 버전 관리가 깨진다.
-> → 문구를 한 곳에서 관리하려면 fixture 쪽에도 `category`·`detail`이 필요해 보인다. **판단은 엔진 담당 소관.**
-
-### 3.3 타입 차이
-`survey-q-source-check`가 백엔드는 `BOOLEAN`, 프론트는 `SINGLE_CHOICE`(예/아니요)다. 문서상으로는 선택지에 `detail`을 붙일 수 있는 **`SINGLE_CHOICE` 기준으로 기술**한다.
-
-### 3.4 버전 ID
-프론트 draft는 `questionnaire-safe-t-v2-frontend-draft`다. 확정 시 **`questionnaire-safe-t-v2`**로 정리하자는 제안을 9/6 미팅 안건으로 올려둔다.
+- 버전 ID: `questionnaire-safe-t-v2`
+- 문항 수: 정확히 10개, 전부 필수
+- 모든 문항: `category`, `prompt`, `detail`, `displayOrder`, 선택 범위를 버전과 함께 고정
+- 모든 선택지: `optionId`, `label`, `detail`, `displayOrder`를 버전과 함께 고정
+- Q5 `survey-q-source-check`: `SINGLE_CHOICE`
+- Q6 `survey-q-interests`: 1개 이상 3개 이하
+- Q10 `survey-q-learning-goal`: 1개 이상 2개 이하
+- 나머지 문항: 정확히 1개 선택
+- 엔진은 원본 선택을 저장할 뿐 성향 등급이나 위험 한도로 변환하지 않는다.
 
 ---
 
@@ -157,12 +141,5 @@
 
 ## 5. 후속
 
-**기획 담당 (이 문서 범위)**
-- [ ] 9/6 미팅에서 §4(배점 30점 재정의) 결론을 받아 이 문서와 기획서에 반영
-- [ ] 확정 문항·채점 연결을 **기능명세서 4번(AI 및 데이터 처리 방식)**에 옮겨 기술
-
-**팀에 전달할 사항** *(각 담당 소관)*
-- 문항 수·필드·타입·버전 ID 차이 (§3)
-- Selection Orchestrator의 시나리오 선택 로직에 §2 매핑이 반영되는지
-- `evaluationPlanRef`가 가리킬 **rubric 작성 주체와 일정** (§4의 선행 과제)
-- 심사위원용 프리셋 프로파일 (설문 스킵 경로) — 기능명세서 5번 기재 대상
+- Selection Orchestrator가 §2.1 매핑을 사용해 검수된 후보 안에서 문항을 고르는 기능
+- 심사위원용 프리셋 프로파일과 완료된 샘플 보고서 경로
