@@ -55,8 +55,8 @@
 > 온보딩 설문의 **1차 목적은 여전히 시나리오 매칭**이다. 근거는 다음과 같다.
 >
 > - 백엔드 엔진 스펙: *"엔진은 응답을 **성향 값이나 위험 한도로 변환하지 않아야 한다**"*
-> - 책임 경계표: 설문 해석과 문항 추천은 선택적으로 두는 **외부 Selection Service** 담당
-> - 채점은 **Evaluation Service**가 봉인된 Snapshot을 근거로 수행하며, 설문은 그중 **한 항목(15점)의 대조 재료**로 쓰인다
+> - 현재 PoC 책임 경계: 같은 **Backend Engine의 OpenAI selector**가 설문을 해석하고 문항을 추천한다
+> - 같은 Backend Engine의 **OpenAI evaluator**가 Snapshot을 근거로 채점하며, 설문은 그중 **한 항목(15점)의 대조 재료**로 쓰인다
 >
 > ※ 테스트 문항(UP/DOWN 3개 item)과 온보딩 문항은 **별개**다. 이 문서는 온보딩만 다룬다.
 
@@ -139,8 +139,9 @@
 
 > 레버리지 상품 미사용도 명세에 명시됐다. 관련 개념은 **설문 문항(`survey-q-leverage`)으로만 확인**한다.
 
-## 5. 후속
+## 5. 현재 구현 및 후속
 
-- 외부 Selection Service가 `GET /v1/poc/scenario-catalog`의 검수 후보와 §2.1 매핑을
-  사용해 문항 ID 세 개를 고르는 기능
-- 심사위원용 프리셋 프로파일과 완료된 샘플 보고서 경로
+- 현재 PoC: Backend Engine의 OpenAI selector가 `GET /v1/poc/scenario-catalog`의 version 고정 raw 후보와
+  §2.1 매핑을 사용해 문항 ID 세 개를 고르는 기능. 현재 후보는 `participantSafe=false`이므로
+  로컬 통합용이며 외부 참가자에게 공개하지 않는다.
+- 후속: 심사위원용 프리셋 프로파일과 완료된 샘플 보고서 경로
