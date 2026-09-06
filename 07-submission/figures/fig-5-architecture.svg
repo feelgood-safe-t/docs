@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕','Noto Sans KR',sans-serif">
+  <rect width="1600" height="900" fill="#ffffff"/>
+
+  <!-- client -->
+  <rect x="30" y="96" width="300" height="300" rx="12" fill="#f7f9fb" stroke="#c8d2db" stroke-width="2"/>
+  <text x="56" y="70" font-size="24" font-weight="700" fill="#8794a1">사용자</text>
+  <text x="56" y="146" font-size="30" font-weight="700" fill="#16202b">브라우저</text>
+  <text x="56" y="192" font-size="23" fill="#5b6b7a">정적 웹 호스팅으로 배포</text>
+  <text x="56" y="228" font-size="23" fill="#5b6b7a">화면과 타이머, 60배속 재생</text>
+  <text x="56" y="264" font-size="23" fill="#5b6b7a">판단과 열람 이벤트 누적</text>
+  <rect x="56" y="296" width="248" height="76" rx="8" fill="#ffffff" stroke="#c8d2db" stroke-width="2"/>
+  <text x="180" y="326" text-anchor="middle" font-size="22" fill="#5b6b7a">사용자 상태는</text>
+  <text x="180" y="356" text-anchor="middle" font-size="22" font-weight="700" fill="#16202b">브라우저에만 존재</text>
+
+  <!-- calls -->
+  <line x1="336" y1="246" x2="424" y2="246" stroke="#9aa8b5" stroke-width="2.5"/>
+  <text x="380" y="226" text-anchor="middle" font-size="21" font-weight="700" fill="#1c5fa8">HTTPS</text>
+
+  <!-- proxy -->
+  <rect x="430" y="156" width="146" height="180" rx="12" fill="#f7f9fb" stroke="#c8d2db" stroke-width="2"/>
+  <text x="503" y="228" text-anchor="middle" font-size="26" font-weight="700" fill="#16202b">TLS</text>
+  <text x="503" y="262" text-anchor="middle" font-size="26" font-weight="700" fill="#16202b">프록시</text>
+  <text x="503" y="300" text-anchor="middle" font-size="21" fill="#5b6b7a">인증서 자동</text>
+  <line x1="582" y1="246" x2="628" y2="246" stroke="#9aa8b5" stroke-width="2.5"/>
+
+  <!-- backend container -->
+  <rect x="634" y="60" width="700" height="672" rx="14" fill="#eef4fb" stroke="#1c5fa8" stroke-width="3.5"/>
+  <text x="662" y="106" font-size="28" font-weight="700" fill="#123f70">백엔드 · 단일 서비스</text>
+  <rect x="1120" y="80" width="186" height="40" rx="6" fill="#123f70"/>
+  <text x="1213" y="108" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">사용자 상태 없음</text>
+
+  <text x="662" y="134" font-size="20" fill="#2b5a8c">공개 API 3개 · questionnaire · onboarding-assessment · evaluation</text>
+  <rect x="662" y="152" width="644" height="96" rx="10" fill="#ffffff" stroke="#7ba3d0" stroke-width="2"/>
+  <text x="686" y="190" font-size="25" font-weight="700" fill="#123f70">입력 계약 검증</text>
+  <text x="686" y="226" font-size="22" fill="#2b5a8c">설문 형식, 시나리오 버전과 체크섬, 이벤트 순번과 경과 시간</text>
+
+  <rect x="662" y="246" width="310" height="150" rx="10" fill="#ffffff" stroke="#7ba3d0" stroke-width="2"/>
+  <text x="686" y="284" font-size="25" font-weight="700" fill="#123f70">정적 자료</text>
+  <text x="686" y="320" font-size="22" fill="#2b5a8c">설문 10문항</text>
+  <text x="686" y="352" font-size="22" fill="#2b5a8c">검수된 시나리오 카탈로그</text>
+  <text x="686" y="382" font-size="21" fill="#5b6b7a">읽기 전용 · 버전과 체크섬 고정</text>
+
+  <rect x="996" y="246" width="310" height="150" rx="10" fill="#ffffff" stroke="#7ba3d0" stroke-width="2"/>
+  <text x="1020" y="284" font-size="25" font-weight="700" fill="#123f70">Snapshot 생성</text>
+  <text x="1020" y="320" font-size="22" fill="#2b5a8c">판단 시점 문맥 계산</text>
+  <text x="1020" y="352" font-size="22" fill="#2b5a8c">정규화 후 SHA-256 해시</text>
+  <text x="1020" y="382" font-size="21" fill="#5b6b7a">평가 입력 봉인</text>
+
+  <rect x="662" y="414" width="644" height="132" rx="10" fill="#f4f1fa" stroke="#8b7bb8" stroke-width="2.5"/>
+  <text x="686" y="452" font-size="25" font-weight="700" fill="#4a3c74">AI 연동 경계</text>
+  <text x="686" y="488" font-size="22" fill="#6b5c96">성향 분석과 시나리오 선택 · 7개 항목 과정 평가</text>
+  <text x="686" y="522" font-size="21" fill="#6b5c96">구조화 출력 · 최대 3회 재시도 · 실패 시 502, 임의 점수로 대체하지 않음</text>
+
+  <rect x="662" y="564" width="644" height="132" rx="10" fill="#ffffff" stroke="#16202b" stroke-width="2.5"/>
+  <text x="686" y="602" font-size="25" font-weight="700" fill="#16202b">규칙 코드</text>
+  <text x="686" y="638" font-size="22" fill="#5b6b7a">미응답 시나리오 0점 · 세 시나리오 평균 · 70점 통과 판정</text>
+  <text x="686" y="672" font-size="21" fill="#5b6b7a">항목 점수의 범위와 합계 검증 · 결정론적 계산</text>
+
+  <!-- openai -->
+  <line x1="1340" y1="480" x2="1400" y2="480" stroke="#9aa8b5" stroke-width="2.5"/>
+  <rect x="1406" y="390" width="164" height="180" rx="12" fill="#f4f1fa" stroke="#8b7bb8" stroke-width="2.5"/>
+  <text x="1488" y="452" text-anchor="middle" font-size="26" font-weight="700" fill="#4a3c74">외부</text>
+  <text x="1488" y="486" text-anchor="middle" font-size="26" font-weight="700" fill="#4a3c74">LLM API</text>
+  <text x="1488" y="526" text-anchor="middle" font-size="21" fill="#6b5c96">대화 저장</text>
+  <text x="1488" y="552" text-anchor="middle" font-size="21" fill="#6b5c96">하지 않음</text>
+
+  <line x1="30" y1="782" x2="1570" y2="782" stroke="#e3e9ee" stroke-width="2"/>
+  <text x="30" y="822" font-size="23" fill="#5b6b7a">서버에 데이터베이스가 없다. 설문 응답, 판단 기록, 평가 결과를 사용자별로 저장하지 않으므로 유출될 개인 데이터가 존재하지 않는다.</text>
+  <text x="30" y="858" font-size="23" fill="#5b6b7a">AI는 성향 분석, 시나리오 선택, 항목 평가에만 관여한다. 시장 데이터를 만들지 않고 총점 합산과 통과 판정에도 관여하지 않는다.</text>
+</svg>
