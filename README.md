@@ -1,7 +1,6 @@
-# Safe-T · 기획·문서 저장소
+# 청산노노 · 기획·문서 저장소
 
-> 서비스명: Safe-T(세이프티) · 「AI 레버리지 안전투자 훈련 플랫폼」
-> Simulated AI Finance Education & Training
+> 팀명이자 서비스명: 청산노노 · 「AI 기반 레버리지 모의투자 교육 플랫폼」
 > 대회: 2026 금융 AI Challenge (주최 금융보안원 · 후원 금융위원회 · 운영 데이콘)
 > 최종 마감: 2026-09-07(월) 10:00
 
@@ -47,4 +46,5 @@
 ## 링크
 
 - 대회 페이지: https://daker.ai/public/hackathons/2026-finance-ai-challenge
+- 배포 웹서비스: https://bluemountainnono.monerujo.ai/
 - 이 저장소: https://github.com/feelgood-safe-t/docs
