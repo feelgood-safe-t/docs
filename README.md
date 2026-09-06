@@ -33,6 +33,8 @@
 | [`04-uiux/user-flow-and-wireframes-v0.6.md`](04-uiux/user-flow-and-wireframes-v0.6.md) | ⏸️ 프론트엔드 전담. 구현 결과를 기능명세서로 옮기기 위한 참고 자료 |
 | [`05-meetings/2026-09-02-meeting-agenda.md`](05-meetings/2026-09-02-meeting-agenda.md) | 9/2 미팅 결과, 9/6 안건, 결정사항, 마감 역산 일정 |
 | [`06-implementation/repo-alignment.md`](06-implementation/repo-alignment.md) | 구현 저장소 참고 메모. 기획 문서를 사실에 맞게 쓰기 위한 대조 기록 |
+| [`07-submission/01-proposal-final.md`](07-submission/01-proposal-final.md) | 제출본 원고. 첨부1 기획서 양식에 옮겨 적을 최종 원고 |
+| [`07-submission/02-feature-spec-final.md`](07-submission/02-feature-spec-final.md) | 제출본 원고. 첨부2 기능명세서 양식에 옮겨 적을 최종 원고 |
 | `99-templates/` | 대회 공식 hwpx 양식 2종 (첨부1 기획서, 첨부2 기능명세서) |
 
 ## 작성 규칙
