@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" font-family="'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕','Noto Sans KR',sans-serif">
+  <rect width="1600" height="620" fill="#ffffff"/>
+
+  <!-- span bracket -->
+  <line x1="120" y1="96" x2="1480" y2="96" stroke="#1c5fa8" stroke-width="2.5"/>
+  <line x1="120" y1="96" x2="120" y2="126" stroke="#1c5fa8" stroke-width="2.5"/>
+  <line x1="1480" y1="96" x2="1480" y2="126" stroke="#1c5fa8" stroke-width="2.5"/>
+  <rect x="678" y="70" width="244" height="52" rx="6" fill="#ffffff"/>
+  <text x="800" y="107" text-anchor="middle" font-size="32" font-weight="700" fill="#1c5fa8">상장부터 규제까지 84일</text>
+
+  <!-- axis -->
+  <line x1="120" y1="300" x2="1480" y2="300" stroke="#c8d2db" stroke-width="4"/>
+
+  <!-- markers -->
+  <g>
+    <circle cx="120" cy="300" r="13" fill="#123f70"/>
+    <text x="120" y="360" text-anchor="middle" font-size="27" font-weight="700" fill="#16202b">2026-05-27</text>
+    <text x="120" y="398" text-anchor="middle" font-size="24" fill="#5b6b7a">단일종목 레버리지</text>
+    <text x="120" y="430" text-anchor="middle" font-size="24" fill="#5b6b7a">인버스 ETF 상장</text>
+
+    <circle cx="460" cy="300" r="13" fill="#5b6b7a"/>
+    <text x="460" y="248" text-anchor="middle" font-size="27" font-weight="700" fill="#16202b">~ 2026-06-19</text>
+    <text x="460" y="210" text-anchor="middle" font-size="24" fill="#5b6b7a">개인 누적 순매수 약 8.2조 원</text>
+
+    <circle cx="800" cy="300" r="17" fill="#b3261e"/>
+    <text x="800" y="360" text-anchor="middle" font-size="27" font-weight="700" fill="#16202b">2026-06-23</text>
+    <text x="800" y="398" text-anchor="middle" font-size="24" fill="#b3261e">해당 ETF 14종</text>
+    <text x="800" y="430" text-anchor="middle" font-size="24" fill="#b3261e">하루 평균 25.05% 하락</text>
+
+    <circle cx="1140" cy="300" r="13" fill="#5b6b7a"/>
+    <text x="1140" y="248" text-anchor="middle" font-size="27" font-weight="700" fill="#16202b">2026-08 중순</text>
+    <text x="1140" y="210" text-anchor="middle" font-size="24" fill="#5b6b7a">거래대금 10조 원대 → 1조 원대 이하</text>
+
+    <circle cx="1480" cy="300" r="17" fill="#123f70"/>
+    <text x="1480" y="360" text-anchor="middle" font-size="27" font-weight="700" fill="#123f70">2026-08-19</text>
+    <text x="1480" y="398" text-anchor="middle" font-size="24" font-weight="700" fill="#123f70">모의거래 이수</text>
+    <text x="1480" y="430" text-anchor="middle" font-size="24" font-weight="700" fill="#123f70">의무화 시행</text>
+  </g>
+
+  <!-- outcome band -->
+  <rect x="120" y="474" width="1360" height="86" rx="10" fill="#f7f9fb" stroke="#c8d2db" stroke-width="2"/>
+  <text x="150" y="512" font-size="27" font-weight="700" fill="#16202b">그러나 이수 요건은 총 5거래일 이상 접속, 매 거래일 1시간 이상이라는 시간 조건이다.</text>
+  <text x="150" y="546" font-size="26" fill="#5b6b7a">이수자가 위험을 이해했는지는 측정하지 않는다. 창을 띄워두기만 해도 이수증이 나온다.</text>
+</svg>

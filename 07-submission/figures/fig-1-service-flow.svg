@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" width="1600" height="500" font-family="'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕','Noto Sans KR',sans-serif">
+  <rect width="1600" height="500" fill="#ffffff"/>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9aa8b5"/>
+    </marker>
+  </defs>
+
+  <!-- stages -->
+  <g>
+    <!-- 1 -->
+    <rect x="30" y="120" width="272" height="180" rx="10" fill="#f7f9fb" stroke="#c8d2db" stroke-width="2"/>
+    <text x="166" y="172" text-anchor="middle" font-size="26" fill="#8794a1">STEP 1</text>
+    <text x="166" y="216" text-anchor="middle" font-size="34" font-weight="700" fill="#16202b">투자 성향 설문</text>
+    <text x="166" y="256" text-anchor="middle" font-size="25" fill="#5b6b7a">10문항 · 약 80초</text>
+    <!-- 2 -->
+    <rect x="349" y="120" width="272" height="180" rx="10" fill="#f7f9fb" stroke="#c8d2db" stroke-width="2"/>
+    <text x="485" y="172" text-anchor="middle" font-size="26" fill="#8794a1">STEP 2</text>
+    <text x="485" y="216" text-anchor="middle" font-size="34" font-weight="700" fill="#16202b">AI 성향 분석</text>
+    <text x="485" y="256" text-anchor="middle" font-size="25" fill="#5b6b7a">강점 · 취약점 · 학습 항목</text>
+    <!-- 3 core -->
+    <rect x="668" y="96" width="272" height="228" rx="10" fill="#eef4fb" stroke="#1c5fa8" stroke-width="3"/>
+    <text x="804" y="148" text-anchor="middle" font-size="26" fill="#1c5fa8">STEP 3</text>
+    <text x="804" y="192" text-anchor="middle" font-size="34" font-weight="700" fill="#123f70">가속 시장 판단</text>
+    <text x="804" y="230" text-anchor="middle" font-size="25" fill="#2b5a8c">시나리오 3개 · 각 최대 3분</text>
+    <g font-size="23" fill="#123f70">
+      <rect x="690" y="252" width="72" height="46" rx="6" fill="#ffffff" stroke="#7ba3d0" stroke-width="2"/>
+      <text x="726" y="283" text-anchor="middle">1</text>
+      <rect x="768" y="252" width="72" height="46" rx="6" fill="#ffffff" stroke="#7ba3d0" stroke-width="2"/>
+      <text x="804" y="283" text-anchor="middle">2</text>
+      <rect x="846" y="252" width="72" height="46" rx="6" fill="#ffffff" stroke="#7ba3d0" stroke-width="2"/>
+      <text x="882" y="283" text-anchor="middle">3</text>
+    </g>
+    <!-- 4 -->
+    <rect x="987" y="120" width="272" height="180" rx="10" fill="#f7f9fb" stroke="#c8d2db" stroke-width="2"/>
+    <text x="1123" y="172" text-anchor="middle" font-size="26" fill="#8794a1">STEP 4</text>
+    <text x="1123" y="216" text-anchor="middle" font-size="34" font-weight="700" fill="#16202b">과정 평가</text>
+    <text x="1123" y="256" text-anchor="middle" font-size="25" fill="#5b6b7a">7개 항목 · 각 100점</text>
+    <!-- 5 -->
+    <rect x="1306" y="120" width="272" height="180" rx="10" fill="#123f70" stroke="#123f70" stroke-width="2"/>
+    <text x="1442" y="172" text-anchor="middle" font-size="26" fill="#a8c4e2">STEP 5</text>
+    <text x="1442" y="216" text-anchor="middle" font-size="33" font-weight="700" fill="#ffffff">결과 보고서</text>
+    <text x="1442" y="252" text-anchor="middle" font-size="24" fill="#cddcec">평균 70점 이상이면</text>
+    <text x="1442" y="282" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">INVEST PASS 발급</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#9aa8b5" stroke-width="2.5" marker-end="url(#ar)">
+    <line x1="308" y1="210" x2="341" y2="210"/>
+    <line x1="627" y1="210" x2="660" y2="210"/>
+    <line x1="946" y1="210" x2="979" y2="210"/>
+    <line x1="1265" y1="210" x2="1298" y2="210"/>
+  </g>
+
+  <!-- footnote band -->
+  <line x1="30" y1="378" x2="1578" y2="378" stroke="#e3e9ee" stroke-width="2"/>
+  <text x="30" y="420" font-size="25" fill="#5b6b7a">각 시나리오는 하나의 가명 자산을 제시하며 서로 독립적이다. 앞 시나리오의 판단은 다음으로 이어지지 않는다.</text>
+  <text x="30" y="458" font-size="25" fill="#5b6b7a">수익률과 방향 적중률은 계산하지 않는다. 채점 대상은 판단 과정이다.</text>
+</svg>

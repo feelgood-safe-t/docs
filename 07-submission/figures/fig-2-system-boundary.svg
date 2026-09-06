@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" width="1600" height="940" font-family="'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕','Noto Sans KR',sans-serif">
+  <rect width="1600" height="940" fill="#ffffff"/>
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9aa8b5"/>
+    </marker>
+  </defs>
+
+  <!-- lane 1: 사전 준비 -->
+  <rect x="30" y="30" width="1540" height="164" rx="12" fill="#fbfcfd" stroke="#dbe3ea" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="56" y="72" font-size="26" font-weight="700" fill="#8794a1">사전 준비 · 서비스 실행 이전</text>
+  <g>
+    <rect x="56" y="94" width="340" height="74" rx="8" fill="#ffffff" stroke="#c8d2db" stroke-width="2"/>
+    <text x="226" y="140" text-anchor="middle" font-size="29" fill="#16202b">실제 과거 시장 구간 수집</text>
+    <rect x="440" y="94" width="340" height="74" rx="8" fill="#f4f1fa" stroke="#8b7bb8" stroke-width="2"/>
+    <text x="610" y="129" text-anchor="middle" font-size="29" fill="#4a3c74">시나리오 제작 LLM</text>
+    <text x="610" y="158" text-anchor="middle" font-size="23" fill="#6b5c96">가명화 · 합성 콘텐츠</text>
+    <rect x="824" y="94" width="300" height="74" rx="8" fill="#ffffff" stroke="#c8d2db" stroke-width="2"/>
+    <text x="974" y="140" text-anchor="middle" font-size="29" fill="#16202b">사람 검수 승인</text>
+    <rect x="1168" y="94" width="376" height="74" rx="8" fill="#ffffff" stroke="#c8d2db" stroke-width="2"/>
+    <text x="1356" y="140" text-anchor="middle" font-size="29" fill="#16202b">검수된 시나리오 카탈로그</text>
+  </g>
+  <g stroke="#9aa8b5" stroke-width="2.5" marker-end="url(#a2)">
+    <line x1="400" y1="131" x2="432" y2="131"/>
+    <line x1="784" y1="131" x2="816" y2="131"/>
+    <line x1="1128" y1="131" x2="1160" y2="131"/>
+  </g>
+
+  <!-- runtime -->
+  <text x="56" y="266" font-size="26" font-weight="700" fill="#8794a1">실행 시점</text>
+
+  <g>
+    <rect x="56" y="292" width="286" height="118" rx="10" fill="#f7f9fb" stroke="#c8d2db" stroke-width="2"/>
+    <text x="199" y="340" text-anchor="middle" font-size="31" font-weight="700" fill="#16202b">사용자</text>
+    <text x="199" y="376" text-anchor="middle" font-size="24" fill="#5b6b7a">설문 응답 · 판단 · 열람</text>
+
+    <rect x="386" y="292" width="286" height="118" rx="10" fill="#f4f1fa" stroke="#8b7bb8" stroke-width="2.5"/>
+    <text x="529" y="340" text-anchor="middle" font-size="31" font-weight="700" fill="#4a3c74">선택 LLM</text>
+    <text x="529" y="376" text-anchor="middle" font-size="24" fill="#6b5c96">카탈로그 안에서만 선택</text>
+  </g>
+  <line x1="348" y1="351" x2="378" y2="351" stroke="#9aa8b5" stroke-width="2.5" marker-end="url(#a2)"/>
+
+  <!-- central engine -->
+  <rect x="386" y="452" width="1158" height="176" rx="12" fill="#eef4fb" stroke="#1c5fa8" stroke-width="3.5"/>
+  <text x="416" y="500" font-size="31" font-weight="700" fill="#123f70">중앙 엔진</text>
+  <text x="416" y="540" font-size="26" fill="#2b5a8c">시장 재생 · 행동 기록 · 평가 입력 생성</text>
+  <rect x="416" y="560" width="240" height="46" rx="6" fill="#123f70"/>
+  <text x="536" y="592" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">LLM 없음</text>
+  <rect x="1092" y="480" width="428" height="120" rx="10" fill="#ffffff" stroke="#7ba3d0" stroke-width="2.5"/>
+  <text x="1306" y="524" text-anchor="middle" font-size="28" font-weight="700" fill="#123f70">평가 입력 봉인</text>
+  <text x="1306" y="560" text-anchor="middle" font-size="23" fill="#2b5a8c">입력 해시 · 기준 · 프롬프트 · 모델 버전</text>
+  <text x="1306" y="588" text-anchor="middle" font-size="23" fill="#2b5a8c">같은 입력에는 같은 결과</text>
+  <line x1="529" y1="414" x2="529" y2="446" stroke="#9aa8b5" stroke-width="2.5" marker-end="url(#a2)"/>
+  <line x1="199" y1="414" x2="199" y2="540" stroke="#9aa8b5" stroke-width="2.5"/>
+  <line x1="199" y1="540" x2="378" y2="540" stroke="#9aa8b5" stroke-width="2.5" marker-end="url(#a2)"/>
+
+  <!-- scoring -->
+  <g>
+    <rect x="386" y="676" width="500" height="122" rx="10" fill="#f4f1fa" stroke="#8b7bb8" stroke-width="2.5"/>
+    <text x="636" y="724" text-anchor="middle" font-size="31" font-weight="700" fill="#4a3c74">평가 LLM</text>
+    <text x="636" y="762" text-anchor="middle" font-size="24" fill="#6b5c96">7개 항목별 점수와 근거만 생성</text>
+
+    <rect x="1044" y="676" width="500" height="122" rx="10" fill="#f7f9fb" stroke="#16202b" stroke-width="2.5"/>
+    <text x="1294" y="724" text-anchor="middle" font-size="31" font-weight="700" fill="#16202b">규칙 코드</text>
+    <text x="1294" y="762" text-anchor="middle" font-size="24" fill="#5b6b7a">미응답 0점 · 평균 · 70점 통과 판정</text>
+  </g>
+  <line x1="1306" y1="632" x2="1306" y2="668" stroke="#9aa8b5" stroke-width="2.5"/>
+  <line x1="1306" y1="650" x2="636" y2="650" stroke="#9aa8b5" stroke-width="2.5"/>
+  <line x1="636" y1="650" x2="636" y2="668" stroke="#9aa8b5" stroke-width="2.5" marker-end="url(#a2)"/>
+  <line x1="890" y1="737" x2="1036" y2="737" stroke="#9aa8b5" stroke-width="2.5" marker-end="url(#a2)"/>
+
+  <!-- footnote -->
+  <line x1="30" y1="846" x2="1570" y2="846" stroke="#e3e9ee" stroke-width="2"/>
+  <text x="30" y="888" font-size="25" fill="#5b6b7a">LLM은 중앙 엔진 밖에 있다. 시장 가격을 만들지 않고, 총점 합산과 통과 판정에도 관여하지 않는다.</text>
+  <text x="30" y="924" font-size="25" fill="#5b6b7a">채점 출력이 범위를 벗어나면 임의로 보정하지 않고 실패로 처리한다.</text>
+</svg>
