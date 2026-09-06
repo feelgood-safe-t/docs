@@ -4,7 +4,7 @@
 |---|---|
 | 팀명 | 청산노노 |
 | 구성원 성명 | 박상현(팀장), 김민기, 김인근, 이이삭 |
-| 웹서비스 URL | http://bluemountainnono.s3-website-ap-southeast-1.amazonaws.com/ |
+| 웹서비스 URL | https://bluemountainnono.monerujo.ai/ |
 
 ---
 
@@ -169,7 +169,7 @@
 
 | 항목 | 내용 |
 |---|---|
-| 웹서비스 URL | http://bluemountainnono.s3-website-ap-southeast-1.amazonaws.com/ |
+| 웹서비스 URL | https://bluemountainnono.monerujo.ai/ |
 | 테스트 계정 | 필요 없다. 접속 즉시 익명으로 시작한다 |
 | 준비물 | 없다. 설치와 인증서가 필요 없다 |
 | 짧은 확인 경로 | 첫 시나리오에서 판단을 한 번 제출한 뒤 시험 종료를 선택하면 약 3분 만에 결과 화면까지 확인할 수 있다 |

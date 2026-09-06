@@ -46,5 +46,5 @@
 ## 링크
 
 - 대회 페이지: https://daker.ai/public/hackathons/2026-finance-ai-challenge
-- 배포 웹서비스: http://bluemountainnono.s3-website-ap-southeast-1.amazonaws.com/
+- 배포 웹서비스: https://bluemountainnono.monerujo.ai/
 - 이 저장소: https://github.com/feelgood-safe-t/docs
